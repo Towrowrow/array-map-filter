@@ -29,6 +29,11 @@ Sortie attendue:
  */
 
 function filterOnPrice(products, maxPrice) {
+  max = maxPrice;
+  const toto = products.filter(function(poop){
+      return poop.price <= max;
+  });
+  return toto;
 }
 
 // Ne pas modifier l'export

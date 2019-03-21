@@ -27,6 +27,16 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+
+  let keep = comments.filter(function(pika){
+
+    for(let i = 0 ; i < bannedWords.length; i++ ){
+        if(pika.toLowerCase().includes(bannedWords[i].toLowerCase())) {
+          return false;} 
+    }
+    return true;
+  });
+  return keep;
 }
 
 // Ne pas modifier l'export

@@ -43,6 +43,16 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+
+const result = foods.map(function(miam){
+if (miam.isVegetarian === true){
+	return miam.food+" is suitable for vegetarians"}
+else {
+	return miam.food+" is not suitable for vegetarians"}
+	});
+
+return result;
+
 }
 
 

@@ -52,6 +52,16 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
+  const Pi = Math.PI;
+  const cucu = radiuses.map(function(item){
+  let circle ={};// déclare un objet vide
+
+    circle.radius = item;
+    circle.circumference = (2 * Pi * item).toFixed(3);
+    circle.surface = (Pi * item * item).toFixed(3);
+    return circle; // à chaque tour de map, renvoie l'objet circle avec nouveau couple clef/valeurs
+  });
+  return cucu;// retour de la fonction qui contient l'enselble des objets
 }
 
 
